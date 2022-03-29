@@ -34,7 +34,6 @@ def serialize(root):
     helper(root)
     return " ".join(nodeValues)
 
-
 def deserialize(data):
     """Decodes your encoded data to tree.
 

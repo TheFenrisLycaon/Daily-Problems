@@ -19,7 +19,7 @@ from typing import *
 
 
 def maxSubarry(arr: List[int], k: int) -> List[List[int]]:
-    return [max(arr[i: i + k]) for i in range(len(arr) - k + 1)]
+    return [max(arr[i : i + k]) for i in range(len(arr) - k + 1)]
 
 
 for i in range(int(input())):

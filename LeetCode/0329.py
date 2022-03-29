@@ -1,10 +1,8 @@
 from typing import *
 
-
 class Solution:
     def findDuplicate(self, nums: List[int]) -> int:
-        if len(nums) <= 1:
-            return -1
+        if len(nums) <= 1: return -1
         slow, fast = nums[0], nums[nums[0]]
         while slow != fast:
             slow = nums[slow]

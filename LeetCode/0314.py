@@ -1,6 +1,5 @@
 from typing import *
 
-
 class Solution:
     def simplifyPath(self, path: str) -> str:
         tokens = path.split('/')

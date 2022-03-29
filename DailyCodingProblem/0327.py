@@ -6,10 +6,8 @@ For example, given [(30, 75), (0, 50), (60, 150)], you should return 2.
 """
 from typing import *
 
-
 def foo():
     pass
-
 
 for i in range(int(input())):
     print(foo())

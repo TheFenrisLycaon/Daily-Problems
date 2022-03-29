@@ -7,7 +7,7 @@ class Solution:
         for i in range(len(A)):
             smol = A[i]
             unique.add(smol)
-            for j in A[i + 1:]:
+            for j in A[i + 1 :]:
                 if j < smol and j not in unique:
                     smol = j
             if smol != A[i]:

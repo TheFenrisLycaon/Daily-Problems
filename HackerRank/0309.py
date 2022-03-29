@@ -2,7 +2,7 @@ from collections import deque
 from typing import *
 
 
-def quickestWayUp(ladders: List, snakes: List) -> int:
+def quickestWayUp(ladders : List, snakes : List) -> int:
     graph = {}
     for x, y in ladders + snakes:
         graph[x] = y

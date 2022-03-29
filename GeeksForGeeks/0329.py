@@ -1,3 +1,5 @@
+from typing import *
+
 RYTE, DOWN = 1, 2
 
 

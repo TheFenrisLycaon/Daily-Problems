@@ -27,7 +27,7 @@ def search(string: str, words: List[str]) -> List[str]:
     """
     for word in words:
         if string.startswith(word):
-            return [word] + search(string[len(word):], words)
+            return [word] + search(string[len(word) :], words)
     return []
 
 
