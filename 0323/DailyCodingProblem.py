@@ -44,8 +44,20 @@ The name of a directory or sub-directory will not contain a period.
 """
 from typing import *
 
-def foo():
-    pass
+
+def deepFind(tree: str):
+    tree = tree.split("\n")
+    path, res, total = [], 0, 0
+    for line in tree:
+        tabs = line.count("\t")
+        while len(path) > tabs:
+            total -= path.pop()
+        path.append(len(line) - tabs)
+        total += path[-1]
+        if "." in line:
+            res = max(res, total + len(path) - 1)
+    return res
+
 
 for i in range(int(input())):
-    print(foo())
+    print(deepFind())
