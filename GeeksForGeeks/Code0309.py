@@ -10,7 +10,6 @@ def Push(x: int, stack1: List[int], stack2: List[int]) -> None:
 
 # Function to pop an element from queue by using 2 stacks.
 def Pop(stack1: List[int], stack2: List[int]) -> int:
-
     """
     stack1: list
     stack2: list

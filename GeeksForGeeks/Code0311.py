@@ -2,7 +2,7 @@ from typing import *
 
 
 class Solution:
-    def findHeight(self, N:int, arr: List[int]) -> int:
+    def findHeight(self, N: int, arr: List[int]) -> int:
         dp = [0] * N
         for i in range(N):
             dp[i] = dp[arr[i]] + 1

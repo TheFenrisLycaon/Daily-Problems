@@ -31,7 +31,6 @@ class Solution:
                 if dp[i][j - 1] > 0:
                     dp[i][j] = dp[i][j] + dp[i][j - 1]
 
-
         return dp[n - 1][m - 1] % (10**9 + 7)
 
 

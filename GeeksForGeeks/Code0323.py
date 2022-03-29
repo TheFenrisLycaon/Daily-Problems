@@ -17,7 +17,7 @@ class Node:
 
 
 def swapkthnode(head: Node, num: int, k: int) -> Node:
-    if n<k:
+    if n < k:
         return head
 
     if (2 * k - 1) == n:
@@ -29,20 +29,17 @@ def swapkthnode(head: Node, num: int, k: int) -> Node:
         x_prev = x
         x = x.next
 
-
     y = head
     y_prev = Node(None)
     for i in range(n - k):
         y_prev = y
         y = y.next
 
-
     if x_prev is not None:
         x_prev.next = y
 
     if y_prev is not None:
         y_prev.next = x
-
 
     temp = x.next
     x.next = y.next
@@ -55,6 +52,7 @@ def swapkthnode(head: Node, num: int, k: int) -> Node:
         head = x
 
     return head
+
 
 _INPUT_LINES = sys.stdin.read().splitlines()
 input = iter(_INPUT_LINES).__next__
@@ -120,7 +118,8 @@ if __name__ == "__main__":
         nodes_a = list(map(int, input().strip().split()))
         for x in nodes_a:
             a.append(x)
-        check = [getNthfromBeg(a.head, kth_node), getNthfromEnd(a.head, kth_node)]
+        check = [getNthfromBeg(a.head, kth_node),
+                 getNthfromEnd(a.head, kth_node)]
         new_head = swapkthnode(a.head, n, kth_node)
         new_check = [
             getNthfromEnd(new_head, kth_node),

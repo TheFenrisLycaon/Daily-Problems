@@ -15,7 +15,7 @@ class Solution:
             if tops[i] == bottoms[i]:
                 same += 1
 
-        for x in range(1,7):
+        for x in range(1, 7):
             if (count_a[x] + count_b[x] - same) == N:
                 return N - max(count_a[x], count_b[x])
 

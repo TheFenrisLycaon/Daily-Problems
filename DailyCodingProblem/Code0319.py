@@ -8,6 +8,8 @@ the longest substring with k distinct characters is "bcb".
 from typing import *
 
 #! NOR WORKING YET
+
+
 def foo(s, k):
     a = 0
     oc = [0] * 26
