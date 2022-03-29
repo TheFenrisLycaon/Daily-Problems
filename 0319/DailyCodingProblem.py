@@ -7,8 +7,25 @@ the longest substring with k distinct characters is "bcb".
 """
 from typing import *
 
-def foo():
-    pass
+#! NOR WORKING YET
+def foo(s, k):
+    a = 0
+    oc = [0] * 26
+    max_len = 0
+    first = -1
+
+    for b in range(0, len(s)):
+        oc[ord(s[b]) - ord("a")] += 1
+        while oc[ord(s[b]) - ord("a")] > k:
+            oc[ord(s[a]) - ord("a")] -= 1
+            a += 1
+        if b - a + 1 > max_len:
+            max_len = b - a + 1
+            first = a + 1
+
+    print(first)
+    print(max_len)
+
 
 for i in range(int(input())):
-    print(foo())
+    print(foo(input(), int(input())))
